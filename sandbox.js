@@ -1,27 +1,9 @@
-// explicit types
 var pepo;
-var age;
-var isIn;
-// array
-pepo = 'ricardo';
-var group = [];
-group.push(pepo);
-// union types
-var mix = [];
-mix.push(pepo);
-mix.push(30);
-console.log(mix);
-var uid;
-uid = 'ssgsdg';
-uid = 45;
-// object 
-var obj;
-obj = {
-    name: 'ricardo',
-    age: 29
-};
-var obj2;
-obj2 = {
-    name: 'ricardo',
-    numb: 12
-};
+pepo = true;
+pepo = 'ola';
+pepo = { name: 'John' };
+var all = [];
+all.push(true);
+all.push(45);
+var all2;
+all2 = { name: 'nvbnvb', bla: true };

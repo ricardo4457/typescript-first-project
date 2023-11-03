@@ -1,42 +1,18 @@
-// explicit types
 
- let pepo : string ;
- let age : number ;
- let isIn : boolean ;
+let pepo : any ;
 
- // array
-  pepo = 'ricardo';
-  let group : string[]= [];
-  group.push(pepo);
 
-  // union types
-  
-  let mix : (string|number)[]= [];
+pepo = true ;
 
-   mix.push(pepo);
-   mix.push(30);
- console.log(mix);
+pepo = 'ola' ;
 
- let uid: string|number;
+pepo = {name: 'John'}
 
- uid = 'ssgsdg';
- uid = 45;
+let all : any[] = [] ;
 
- // object 
+all.push(true);
+all.push(45);
 
- let obj : object;
+let all2: {name: any , bla: any};
 
- obj = {
-    name:'ricardo', 
-    age:29
-  };
-
- let obj2 : {
-  name: string,
-  numb: number,
- }
-
-  obj2 = {
-  name: 'ricardo',
-  numb: 12,
- }
+ all2 = {name: 'nvbnvb' , bla: true};
