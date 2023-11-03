@@ -1,17 +1,24 @@
-let character = 'mario'
-let age = 30
-let isBlack = false
+// Arrays
 
-//character = 20
-character = 'ricardo'
+let names = ['name1', 'name2']
 
-age = 20
+names.push('name3')
 
-isBlack = true
+let numbers = [20,23]
 
-const circ = (diameter : number) => {
+numbers.push(34)
 
-  return diameter * Math.PI
-}
+ let mix = ['name1', 'name2' ,90 ,34 ] 
 
-console.log(circ(45))
+ mix.push('name3' , 34)
+
+ // Objects
+
+ let person  = {
+  name: 'josh',
+  age: 34,
+  color: 'green',
+ }
+
+ person.age = 20;
+ person.color = 'red';
