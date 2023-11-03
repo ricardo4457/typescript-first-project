@@ -1,24 +1,42 @@
-// Arrays
+// explicit types
 
-let names = ['name1', 'name2']
+ let pepo : string ;
+ let age : number ;
+ let isIn : boolean ;
 
-names.push('name3')
+ // array
+  pepo = 'ricardo';
+  let group : string[]= [];
+  group.push(pepo);
 
-let numbers = [20,23]
+  // union types
+  
+  let mix : (string|number)[]= [];
 
-numbers.push(34)
+   mix.push(pepo);
+   mix.push(30);
+ console.log(mix);
 
- let mix = ['name1', 'name2' ,90 ,34 ] 
+ let uid: string|number;
 
- mix.push('name3' , 34)
+ uid = 'ssgsdg';
+ uid = 45;
 
- // Objects
+ // object 
 
- let person  = {
-  name: 'josh',
-  age: 34,
-  color: 'green',
+ let obj : object;
+
+ obj = {
+    name:'ricardo', 
+    age:29
+  };
+
+ let obj2 : {
+  name: string,
+  numb: number,
  }
 
- person.age = 20;
- person.color = 'red';
+  obj2 = {
+  name: 'ricardo',
+  numb: 12,
+ }

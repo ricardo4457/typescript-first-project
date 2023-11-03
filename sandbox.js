@@ -1,15 +1,27 @@
-// Arrays
-var names = ['name1', 'name2'];
-names.push('name3');
-var numbers = [20, 23];
-numbers.push(34);
-var mix = ['name1', 'name2', 90, 34];
-mix.push('name3', 34);
-// Objects
-var person = {
-    name: 'josh',
-    age: 34,
-    color: 'green'
+// explicit types
+var pepo;
+var age;
+var isIn;
+// array
+pepo = 'ricardo';
+var group = [];
+group.push(pepo);
+// union types
+var mix = [];
+mix.push(pepo);
+mix.push(30);
+console.log(mix);
+var uid;
+uid = 'ssgsdg';
+uid = 45;
+// object 
+var obj;
+obj = {
+    name: 'ricardo',
+    age: 29
 };
-person.age = 20;
-person.color = 'red';
+var obj2;
+obj2 = {
+    name: 'ricardo',
+    numb: 12
+};
