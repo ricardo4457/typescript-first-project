@@ -1,22 +1,35 @@
-// const anchor = document.querySelector('a')!;
 
-// // if(anchor){
-// // console.log(anchor.href)
-// // }
+//Define a class
+class Invoice {
+  client: string;
+  details: string;
+  amount: number;
 
-//     console.log(anchor.href)
+  constructor(c: string, d: string, a: number) {
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
+  format() {
+    return `${this.client}:${this.details} values this:${this.amount}`;
+  }
+}
+// new invoices in a array 
+const invOne = new Invoice('ricardo', 'Hospital', 40);
+const invTwo = new Invoice('joão', 'Apresentar', 2);
 
-// // catches the type of html elements
-
-// const form = document.querySelector('form')!;
-
-// How to access different html elements
-// Tells the specific element type
+let invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+console.log(invoices);
+// reassign new values to existing invoices
+invOne.client='nuno';
+invTwo.client='alex';
+console.log(invOne , invTwo);
+//form
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
-// console.log(form.children);
 
 // inputs
-
 const type = document.querySelector("#type") as HTMLSelectElement;
 const tofrom = document.querySelector("#tofrom") as HTMLInputElement;
 const details = document.querySelector("#details") as HTMLInputElement;
