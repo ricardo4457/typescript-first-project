@@ -1,15 +1,16 @@
 
-//Define a class
+//Modifiers
 class Invoice {
-  client: string;
-  details: string;
-  amount: number;
+  // props are all public by default
+  // readonly client: string;
+  // private details: string;
+  // public amount: number;
 
-  constructor(c: string, d: string, a: number) {
-    this.client = c;
-    this.details = d;
-    this.amount = a;
-  }
+  constructor(
+    readonly client: string,
+    private details: string,
+    public amount: number,
+    ) {}
   format() {
     return `${this.client}:${this.details} values this:${this.amount}`;
   }
@@ -22,10 +23,9 @@ let invoices: Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 console.log(invoices);
-// reassign new values to existing invoices
-invOne.client='nuno';
-invTwo.client='alex';
-console.log(invOne , invTwo);
+
+invoices.forEach(inv => { console.log(inv.client, inv.amount, inv.format); });
+
 //form
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 
@@ -38,5 +38,5 @@ const amount = document.querySelector("#amount") as HTMLInputElement;
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
 
-  console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+  // console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });

@@ -1,10 +1,14 @@
 "use strict";
-//Define a class
+//Modifiers
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // props are all public by default
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client}:${this.details} values this:${this.amount}`;
@@ -17,10 +21,7 @@ let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 console.log(invoices);
-// reassign new values to existing invoices
-invOne.client = 'nuno';
-invTwo.client = 'alex';
-console.log(invOne, invTwo);
+invoices.forEach(inv => { console.log(inv.client, inv.amount, inv.format); });
 //form
 const form = document.querySelector(".new-item-form");
 // inputs
@@ -30,5 +31,5 @@ const details = document.querySelector("#details");
 const amount = document.querySelector("#amount");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+    // console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
